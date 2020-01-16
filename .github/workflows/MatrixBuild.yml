@@ -1,4 +1,4 @@
-name: CI_matrix
+name: MatrixBuild
 
 on: [push]
 # nice example: https://github.com/microsoft/vs-editor-api/blob/master/.github/workflows/main.yml
@@ -10,23 +10,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest]
-        include:
-          - os: ubuntu-18.04
-            msbuild: dotnet msbuild
-          - os: windows-latest
-            msbuild: dotnet msbuild
-
-            # msbuild: '"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe"'
-
+        os: [windows-latest, ubuntu-latest]
     steps:
     - uses: actions/checkout@v1
 
     - name: Restore NuGet Packages
-      run: |
-        ${{ matrix.msbuild }} Frends.Community.Echo.sln /t:Restore
+      run: dotnet build Frends.Community.Echo.sln /t:Restore
     - name: Build
-      run: ${{ matrix.msbuild }} Frends.Community.Echo.sln /t:Build
+      run: dotnet build Frends.Community.Echo.sln /t:Build
     
     - name: Test
       run: dotnet test Frends.Community.Echo.sln 
