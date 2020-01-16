@@ -14,10 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Restore NuGet Packages
-      run: dotnet restore Frends.Community.Echo.sln 
     - name: Build
-      run: dotnet build Frends.Community.Echo.sln
+      run: dotnet build
     
     - name: Test
-      run: dotnet test Frends.Community.Echo.sln 
+      run: dotnet test
