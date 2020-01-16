@@ -1,0 +1,22 @@
+name: CI_testing
+
+on: [push]
+# nice example: https://github.com/microsoft/vs-editor-api/blob/master/.github/workflows/main.yml
+
+jobs:
+  build:
+    name: Build on without matrix
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Restore NuGet Packages
+      run: certutil.exe -urlcache -split -f "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" nuget.exe
+        nuget.exe restore
+       
+    - name: Build
+      run: '"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" Frends.Community.Echo.sln'
+      
+    - name: Test
+      run: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" Frends.Community.EchoTests\bin\Debug\Frends.Community.EchoTests.dll'

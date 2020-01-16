@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<PackageVersion>0.0.1</PackageVersion>
+	<description>This is template task.</description>
+	<authors>HiQ Finland</authors>
+	<copyright>HiQ Finland</copyright>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<RepositoryUrl>https://github.com/CommunityHiQ/Frends.Community.Echo</RepositoryUrl>
+	<IncludeSymbols>true</IncludeSymbols>
+	
+	
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\galkios\OneDrive - HiQ Finland Oy\Frends and Co sources\Frends.Community.Echo\Frends.Community.Echo\Frends.Community.Echo.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>
