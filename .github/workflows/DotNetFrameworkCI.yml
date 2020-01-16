@@ -1,4 +1,4 @@
-name: CI_testing
+name: DotNetFrameworkCI
 
 on: [push]
 # nice example: https://github.com/microsoft/vs-editor-api/blob/master/.github/workflows/main.yml
@@ -20,4 +20,4 @@ jobs:
       run: '"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" Frends.Community.Echo.sln'
       
     - name: Test
-      run: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" Frends.Community.EchoTests\bin\Debug\Frends.Community.EchoTests.dll'
+      run: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" Frends.Community.EchoTests.sln'
