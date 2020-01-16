@@ -15,9 +15,9 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Restore NuGet Packages
-      run: dotnet build Frends.Community.Echo.sln /t:Restore
+      run: dotnet restore Frends.Community.Echo.sln 
     - name: Build
-      run: dotnet build Frends.Community.Echo.sln /t:Build
+      run: dotnet build Frends.Community.Echo.sln
     
     - name: Test
       run: dotnet test Frends.Community.Echo.sln 
