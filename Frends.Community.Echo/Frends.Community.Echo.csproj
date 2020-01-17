@@ -7,18 +7,21 @@
 	<authors>HiQ Finland</authors>
 	<copyright>HiQ Finland</copyright>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<RepositoryUrl>https://github.com/CommunityHiQ/Frends.Community.Echo</RepositoryUrl>
-	<IncludeSymbols>true</IncludeSymbols>
-	
-	
+	<PackageProjectUrl>https://github.com/CommunityHiQ/Frends.Community.Echo</PackageProjectUrl>
+	<IncludeSource>true</IncludeSource>
+	<PackageTags>Frends</PackageTags>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\galkios\OneDrive - HiQ Finland Oy\Frends and Co sources\Frends.Community.Echo\Frends.Community.Echo\Frends.Community.Echo.xml</DocumentationFile>
-  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="FrendsTaskMetadata.json"  Pack="true" PackagePath="/">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
 
 </Project>
+

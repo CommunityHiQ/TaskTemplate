@@ -52,23 +52,19 @@ To fetch result use syntax:
 
 Clone a copy of the repo
 
-`git clone https://github.com/CommunityHiQ/Frends.Community.Echo`
-
-Restore dependencies
-
-`dotnet restore`
+`git clone https://github.com/CommunityHiQ/Frends.Community.Echo.git`
 
 Rebuild the project
 
 `dotnet build`
 
-Run Tests with nunit3. Tests can be found under
+Run Tests
 
 `dotnet test`
 
 Create a NuGet package
 
-`dotnet pack --configuration Release Frends.Community.PdfFromTemplate`
+`dotnet pack --configuration Release`
 
 # Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
