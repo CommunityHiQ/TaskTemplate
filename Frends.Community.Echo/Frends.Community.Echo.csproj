@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-	<PackageVersion>0.0.1</PackageVersion>
 	<description>This is template task.</description>
 	<authors>HiQ Finland</authors>
 	<copyright>HiQ Finland</copyright>
@@ -11,10 +10,11 @@
 	<IncludeSource>true</IncludeSource>
 	<PackageTags>Frends</PackageTags>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<Version>0.0.2</Version>
   </PropertyGroup>
   
   <ItemGroup>
-    <None Include="FrendsTaskMetadata.json"  Pack="true" PackagePath="/">
+    <None Include="FrendsTaskMetadata.json" Pack="true" PackagePath="/">
 	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
