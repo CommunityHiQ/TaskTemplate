@@ -15,7 +15,7 @@ jobs:
       run: |
         certutil.exe -urlcache -split -f "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" nuget.exe
         ls
-        nuget.exe restore
+        .\nuget.exe restore
        
     - name: Build
       run: '"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" Frends.Community.Echo.sln'
