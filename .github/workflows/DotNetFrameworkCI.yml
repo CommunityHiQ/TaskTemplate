@@ -14,6 +14,7 @@ jobs:
     - name: Restore NuGet Packages
       run: |
         certutil.exe -urlcache -split -f "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" nuget.exe
+        ls
         nuget.exe restore
        
     - name: Build
