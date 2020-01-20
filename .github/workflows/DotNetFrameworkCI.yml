@@ -10,14 +10,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+
+    - name: Download nuget.exe
+      run: certutil.exe -urlcache -split -f "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" nuget.exe
     
     - name: Restore NuGet Packages
-      run: |
-        certutil.exe -urlcache -split -f "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe" nuget.exe
-        nuget.exe restore
+      run: .\nuget.exe restore
        
     - name: Build
-      run: '"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" Frends.Community.Echo.sln'
+      run: '& "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" Frends.Community.Echo.sln'
       
     - name: Test
-      run: '"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" Frends.Community.Echo.sln'
+      run: '& "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" Frends.Community.Echo.sln'
+      
