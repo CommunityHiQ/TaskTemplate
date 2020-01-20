@@ -1,0 +1,31 @@
+name: MatrixBuild
+
+on: [push]
+# nice example: https://github.com/microsoft/vs-editor-api/blob/master/.github/workflows/main.yml
+
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Build
+      run: dotnet build
+    
+    - name: Test
+      run: dotnet test
+      
+    - name: Pack release version of task
+      if: runner.os == 'Windows' 
+      run: dotnet pack --configuration Release --include-source
+      
+    - name: Push NuGet package to the testfeed
+      if: runner.os == 'Windows' 
+      run: dotnet nuget push Frends.Community.Echo\bin\Release\Frends.Community.Echo.*.nupkg  --api-key ${{ secrets.CommunityTestFeedApiKey }} --source https://www.myget.org/F/frends-community-test/api/v2/package --symbol-source https://www.myget.org/F/frends-community-test/symbols/api/v2/package
+
+
