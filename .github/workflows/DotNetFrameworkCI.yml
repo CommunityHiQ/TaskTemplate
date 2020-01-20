@@ -1,6 +1,10 @@
 name: DotNetFrameworkCI
 
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - master
+        
 # nice example: https://github.com/microsoft/vs-editor-api/blob/master/.github/workflows/main.yml
 
 jobs:
