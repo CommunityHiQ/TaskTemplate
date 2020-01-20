@@ -2,7 +2,7 @@
 
 FRENDS Community Task for Echo
 
- [![Actions Status](https://github.com/CommunityHiQ/Frends.Community.Echo/workflows/{workflow_name}/badge.svg)](https://github.com/{owner}/{repo}/actions) ![MyGet](https://img.shields.io/myget/frends-community/v/Frends.Community.Echo) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+ [![Actions Status](https://github.com/CommunityHiQ/Frends.Community.Echo/workflows/PackAndPushAfterMerge/badge.svg)](https://github.com/CommunityHiQ/Frends.Community.Echo/actions) ![MyGet](https://img.shields.io/myget/frends-community/v/Frends.Community.Echo) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 - [Installing](#installing)
 - [Tasks](#tasks)
