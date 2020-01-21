@@ -1,12 +1,14 @@
 name: DotNetFrameworkCI
 
+# This workflow show how to use "legacy" tools to build C# solution. Newer tools (e.g. dotnet build, dotnet test and dotnet nuget push) sometimes do not work with non-SDK-style csproj files that uses Nuget package references (not PackageReference). This workflow can build, test and pack both .Net Standard and framewerok project, but if your project targets .Net Standard you should convert it to use SDK-style csprojs with PackageReference.
+
+# This workflow will be moved to Framework task template when it is ready.
+
 on:
   push:
     branches-ignore:
       - master
         
-# nice example: https://github.com/microsoft/vs-editor-api/blob/master/.github/workflows/main.yml
-
 jobs:
   build:
     name: Build on without matrix
