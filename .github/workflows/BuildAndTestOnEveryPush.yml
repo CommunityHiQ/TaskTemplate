@@ -1,4 +1,4 @@
-name: MatrixBuild
+name: BuildAndTestOnEveryPush.yml
 
 on:
   push:
