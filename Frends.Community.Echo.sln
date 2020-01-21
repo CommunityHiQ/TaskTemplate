@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\DotNetFrameworkCI.yml = .github\workflows\DotNetFrameworkCI.yml
 		.github\workflows\MatrixBuild.yml = .github\workflows\MatrixBuild.yml
+		.github\workflows\PackAndPushAfterMerge.yml = .github\workflows\PackAndPushAfterMerge.yml
 	EndProjectSection
 EndProject
 Global
