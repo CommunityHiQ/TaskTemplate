@@ -1,0 +1,81 @@
+{
+    "author": "HiQ Finland", // foobar
+    "classifications": ["Solution"],
+    "name": "Community task template",
+    "identity": "Frends.TaskTemplate ", // Unique name for this template
+    "shortName": "frendstasktemplate", // Short name that can be used on the cli
+    "tags": {
+        "language": "C#" // Specify that this template is in C#.
+    },
+    "sourceName": "Frends.Community.Echo", // Will replace the string 'Frends.Community.Echo' with the value provided via -n.
+    "preferNameDirectory": "true",
+
+    "symbols": {
+        "taskName": {
+            "type": "parameter",
+            "defaultValue": "ExecuteEcho",
+            "replaces": "ExecuteEcho"
+        },
+        "className": {
+            "type": "parameter",
+            "defaultValue": "Echo",
+            "replaces": "Echo"
+        },
+		"authors": {
+            "type": "parameter",
+            "defaultValue": "HiQ Finland",
+            "replaces": "HiQ Finland"
+        },
+		"license": {
+            "type": "parameter",
+            "defaultValue": "MIT",
+            "replaces": "MIT"
+        },
+        "EnableCommunityTask": {
+            "type": "parameter",
+            "dataType": "bool",
+            "defaultValue": "true"
+        }
+    },
+    "sources": [{
+            "modifiers": [{
+                    "condition": "(!EnableCommunityTask)",
+                    "exclude": [".github/**", "LICENSE"]
+                    
+                }
+            ]
+        }
+    ],
+	"SpecialCustomOperations": {
+  "**/*.md": {
+    "operations": [
+      {
+        "type": "conditional",
+        "configuration": {
+          "if": ["---#if"],
+          "else": ["---#else"],
+          "elseif": ["---#elseif", "---#elif"],
+          "endif": ["---#endif"],
+          "trim" : "true",
+          "wholeLine": "true",
+        }
+      }
+    ]
+  },
+  "**/*.csproj": {
+      "operations": [
+        {
+          "type": "conditional",
+          "configuration": {
+            "actionableIf": [ "<!--#if" ],
+            "actionableElse": [ "#else", "<!--#else" ],
+            "actionableElseif": [ "#elseif", "<!--#elseif" ],
+            "endif": [ "#endif", "<!--#endif" ],
+            "trim" : "true",
+            "wholeLine": "true",
+          }
+        }
+      ]
+    }
+  }
+}

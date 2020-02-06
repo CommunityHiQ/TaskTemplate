@@ -10,15 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{78F7F22E-6E20-4BCE-8362-0C558568B729}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		LICENSE = LICENSE
 		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{D6B29527-490D-4ECB-B6EB-1C625C815F47}"
-	ProjectSection(SolutionItems) = preProject
-		.github\workflows\BuildAndTestOnEveryPush.yml = .github\workflows\BuildAndTestOnEveryPush.yml
-		.github\workflows\DotNetFrameworkCI.yml = .github\workflows\DotNetFrameworkCI.yml
-		.github\workflows\PackAndPushAfterMerge.yml = .github\workflows\PackAndPushAfterMerge.yml
 	EndProjectSection
 EndProject
 Global
