@@ -1,93 +1,55 @@
-# Frends.Community.Echo
+# Frends task template
 
-FRENDS Community Task for Echo
----#if (EnableCommunityTask)
+This template can be used to create both community and custom task for (FRENDS)[frends.com] integration paltform. This should enamble you to start writing code without any hastle with project formats etc.
 
-<li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
- [![Actions Status](https://github.com/CommunityHiQ/Frends.Community.Echo/workflows/PackAndPushAfterMerge/badge.svg)](https://github.com/CommunityHiQ/Frends.Community.Echo/actions) ![MyGet](https://img.shields.io/myget/frends-community/v/Frends.Community.Echo) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
----#endif
+Created C# solution will use new tool chain from .Net technologies to ensure compatiblity with .Net with crossplatform. 
 
-- [Installing](#installing)
-- [Tasks](#tasks)
-     - [Echo](#Echo)
-- [Building](#building)
-- [Contributing](#contributing)
-- [Change Log](#change-log)
+You can learn more about custom task (here)[https://docs.frends.com/en/articles/2206746-custom-tasks] and from community tasks (here)[https://github.com/CommunityHiQ/Instructions].
 
-# Installing
 
----#if (EnableCommunityTask)
-You can install the task via FRENDS UI Task View or you can find the NuGet package from the following NuGet feed
-https://www.myget.org/F/frends-community/api/v3/index.json and in Gallery view in MyGet https://www.myget.org/feed/frends-community/package/nuget/Frends.Community.Echo
----#else
-You can install the task via FRENDS UI Task View by using `Import Task NuGet` button in Administration > Tasks.
----#endif
+## Install template
 
-# Tasks
+`dotnet new -i frendstasktemplate`
 
-## Echo
+## Create new task with template
 
-Repeats message
+`dotnet new frendstasktemplate -n YourTaskName`
 
-### Properties
+## Get help using template
 
-| Property | Type | Description | Example |
-| -------- | -------- | -------- | -------- |
-| Message | `string` | Some string that will be repeated. | `foo` |
+`dotnet new frendstasktemplate -h`
 
-### Options
+Example output:
 
-| Property | Type | Description | Example |
-| -------- | -------- | -------- | -------- |
-| Amount | `int` | Amount how many times message is repeated. | `3` |
-| Delimiter | `string` | Character(s) used between replications. | `, ` |
+## Uninstall template
 
-### Returns
+`dotnet new -u frendstasktemplate`
 
-A result object with parameters.
+## Create template from this repository
 
-| Property | Type | Description | Example |
-| -------- | -------- | -------- | -------- |
-| Replication | `string` | Repeated string. | `foo, foo, foo` |
+`dotnet pack`
 
-Usage:
-To fetch result use syntax:
+This command will build the project and create a NuGet package in .\bin\Debug 
 
-`#result.Replication`
+`dotnet new -i <ABSOLUTE_PATH_TO_NUPKG_FILE>`
 
-# Building
+## Changing target framework
 
----#if (EnableCommunityTask)
-Clone a copy of the repo
+Created project targets .Net standard 2.0. If you  want to target framework or both standard and framewrok you can set 
 
-`git clone https://github.com/CommunityHiQ/Frends.Community.Echo.git`
----#endif
+`<TargetFramework>netstandard2.0</TargetFramework>`
 
-Rebuild the project
+to
 
-`dotnet build`
+`<TargetFrameworks>net461</TargetFrameworks>`
 
-Run Tests
+or 
 
-`dotnet test`
+`<TargetFrameworks>netstandard2.0;net461</TargetFrameworks>`
 
-Create a NuGet package
+.csproj file that is crated for you.
 
-`dotnet pack --configuration Release`
+## special notes about this repository
 
-# Contributing
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+URL https://github.com/CommunityHiQ/Frends.Community.Echo redirects here 
 
-1. Fork the repo on GitHub
-2. Clone the project to your own machine
-3. Commit changes to your own branch
-4. Push your work back up to your fork
-5. Submit a Pull request so that we can review your changes
-
-NOTE: Be sure to merge the latest from "upstream" before making a pull request!
-
-# Change Log
-
-| Version | Changes |
-| ------- | ------- |
-| 0.0.1   | Development stil going on. |
