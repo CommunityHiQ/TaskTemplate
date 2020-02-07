@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace Frends.Community.Echo
 {
-    public class Echo
+    public static class Echo
     {
         /// <summary>
         /// This is task

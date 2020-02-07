@@ -30,6 +30,6 @@ jobs:
       
     - name: Push NuGet package to the testfeed
       if: runner.os == 'Windows' 
-      run: dotnet nuget push Frends.Community.Echo\bin\Release\Frends.Community.Echo.*.nupkg  --api-key ${{ secrets.CommunityTestFeedApiKey }} --source https://www.myget.org/F/frends-community-test/api/v2/package --symbol-source https://www.myget.org/F/frends-community-test/symbols/api/v2/package
+      run: dotnet nuget push Frends.Community.Echo\bin\Release\Frends.Community.Echo.*.nupkg  --api-key ${{ secrets.CommunityFeedApiKey }} --source https://www.myget.org/F/frends-community-test/api/v2/package --symbol-source https://www.myget.org/F/frends-community-test/symbols/api/v2/package
 
 
