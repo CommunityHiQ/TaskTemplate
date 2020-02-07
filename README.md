@@ -9,29 +9,79 @@ You can learn more about custom task (here)[https://docs.frends.com/en/articles/
 
 ## Install template
 
-`dotnet new -i frendstasktemplate`
+`dotnet new -i frendstask`
+
+## Create Community task
+
+`dotnet new frendstask --name Frends.Community.Echo --className Echo --taskName ExecuteEcho --EnableCommunityTask true`
+
+**Always remember to add prefix Frends.Community to namespace when creating a community task and to set EnableCommunityTask to true.**
+
+## Create custom task
+
+`dotnet new frendstask --name namespaceForTask --className classNameForTask --taskName TaskName --license UNLICENSED --authors $env:UserName`
+
+Custom task do not include CI things that are used in Community tasks. License can be anything listed in: https://spdx.org/licenses/ or UNLICENSED.
 
 ## Create new task with template
 
-`dotnet new frendstasktemplate -n YourTaskName`
+`dotnet new frendstask -n YourTaskName`
 
 ## Get help using template
 
-`dotnet new frendstasktemplate -h`
+`dotnet new frendstask -h`
 
 Example output:
 
+
+```
+Usage: new [options]
+
+Options:
+  -h, --help          Displays help for this command.
+  -l, --list          Lists templates containing the specified name. If no name is specified, lists all templates.
+  -n, --name          The name for the output being created. If no name is specified, the name of the current directory is used.
+  -o, --output        Location to place the generated output.
+  -i, --install       Installs a source or a template pack.
+  -u, --uninstall     Uninstalls a source or a template pack.
+  --nuget-source      Specifies a NuGet source to use during install.
+  --type              Filters templates based on available types. Predefined values are "project", "item" or "other".
+  --dry-run           Displays a summary of what would happen if the given command line were run if it would result in a template creation.
+  --force             Forces content to be generated even if it would change existing files.
+  -lang, --language   Filters templates based on language and specifies the language of the template to create.
+  --update-check      Check the currently installed template packs for updates.
+  --update-apply      Check the currently installed template packs for update, and install the updates.
+
+
+Community task template (C#)
+Author: HiQ Finland
+Options:
+  -t|--taskName
+                            string - Optional
+                            Default: ExecuteEcho
+
+  -c|--className
+                            string - Optional
+                            Default: Echo
+
+  -au|--authors
+                            string - Optional
+                            Default: HiQ Finland
+
+  -li|--license
+                            string - Optional
+                            Default: MIT
+
+  -E|--EnableCommunityTask
+                            bool - Optional
+                            Default: true```
+## Update template
+
+`dotnet new frendstask --update-apply `
+
 ## Uninstall template
 
-`dotnet new -u frendstasktemplate`
-
-## Create template from this repository
-
-`dotnet pack`
-
-This command will build the project and create a NuGet package in .\bin\Debug 
-
-`dotnet new -i <ABSOLUTE_PATH_TO_NUPKG_FILE>`
+`dotnet new -u frendstask`
 
 ## Changing target framework
 
@@ -48,6 +98,16 @@ or
 `<TargetFrameworks>netstandard2.0;net461</TargetFrameworks>`
 
 .csproj file that is crated for you.
+
+## Building this repository
+
+`dotnet pack`
+
+This command will build the project and create a NuGet package in .\bin\Debug 
+
+`dotnet new -i <ABSOLUTE_PATH_TO_NUPKG_FILE>`
+
+
 
 ## special notes about this repository
 
