@@ -16,6 +16,6 @@ jobs:
     - name: Push NuGet package to the testfeed
       if: runner.os == 'ubuntu-latest' 
       run: dotnet nuget push Frends.Community.Echo/bin/Release/Frends.Community.Echo.*.nupkg --api-key ${{ secrets.CommunityFeedApiKey }} --source https://www.myget.org/F/frends-community-test/api/v2/package
-	  
+
     - name: Print further instructions
       run: echo 'If you did a merge remember to push package to nuger.org after you have ensured that it works.'
