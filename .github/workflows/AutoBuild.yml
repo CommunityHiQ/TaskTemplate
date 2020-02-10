@@ -1,4 +1,4 @@
-name: AutoBuild.yml
+name: AutoBuild
 
 on: [push]
 
