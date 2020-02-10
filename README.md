@@ -1,6 +1,7 @@
 # Frends task template
 
-[![Actions Status](https://github.com/CommunityHiQ/Frends.Community.Echo/workflows/AutoBuild/badge.svg)](https://github.com/CommunityHiQ/Frends.Community.Echo/actions) ![Nuget](https://img.shields.io/nuget/v/frendstask) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+![](https://github.com/CommunityHiQ/Frends.Community.Echo/workflows/AutoBuild/badge.svg) ![Nuget](https://img.shields.io/nuget/v/frendstask) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This template can be used to create both community and custom task for [FRENDS](frends.com) integration paltform. This should enamble you to start writing code without any hastle with project formats etc.
 
