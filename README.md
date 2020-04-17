@@ -1,10 +1,13 @@
 # Frends task template
 
-This template can be used to create both community and custom task for (FRENDS)[frends.com] integration paltform. This should enamble you to start writing code without any hastle with project formats etc.
+
+![](https://github.com/CommunityHiQ/Frends.Community.Echo/workflows/AutoBuild/badge.svg) ![Nuget](https://img.shields.io/nuget/v/frendstask) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This template can be used to create both community and custom task for [FRENDS](frends.com) integration paltform. This should enamble you to start writing code without any hastle with project formats etc.
 
 Created C# solution will use new tool chain from .Net technologies to ensure compatiblity with .Net with crossplatform. 
 
-You can learn more about custom task (here)[https://docs.frends.com/en/articles/2206746-custom-tasks] and from community tasks (here)[https://github.com/CommunityHiQ/Instructions].
+You can learn more about custom task [here](https://docs.frends.com/en/articles/2206746-custom-tasks) and from community tasks [here](https://github.com/CommunityHiQ/Instructions).
 
 
 ## Install template
@@ -76,8 +79,8 @@ Options:
                                 netstandard2.0           - .Net standard 2.0
                                 net471                   - .NET Framework 4.7.1
                             Default: netstandard2.0;net471
-
 ```
+
 ## Update template
 
 `dotnet new frendstask --update-apply `
