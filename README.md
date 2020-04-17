@@ -14,21 +14,17 @@ You can learn more about custom task [here](https://docs.frends.com/en/articles/
 
 `dotnet new -i frendstask`
 
-## Create Community task
+## Create a new Community task
 
 `dotnet new frendstask --name Frends.Community.Echo --className Echo --taskName ExecuteEcho --EnableCommunityTask true`
 
 **Always remember to add prefix Frends.Community to namespace when creating a community task and to set EnableCommunityTask to true.**
 
-## Create custom task
+## Create a new custom task
 
 `dotnet new frendstask --name namespaceForTask --className classNameForTask --taskName TaskName --license UNLICENSED --authors $env:UserName`
 
 Custom task do not include CI things that are used in Community tasks. License can be anything listed in: https://spdx.org/licenses/ or UNLICENSED.
-
-## Create new task with template
-
-`dotnet new frendstask -n YourTaskName`
 
 ## Get help using template
 
@@ -77,7 +73,12 @@ Options:
   -E|--EnableCommunityTask
                             bool - Optional
                             Default: true
-                            
+
+  -T|--TargetPlatform
+                                netstandard2.0;net471    - Target both .Net standard 2.0 and .NET Framework 4.7.1
+                                netstandard2.0           - .Net standard 2.0
+                                net471                   - .NET Framework 4.7.1
+                            Default: netstandard2.0;net471
 ```
 
 ## Update template
@@ -88,22 +89,6 @@ Options:
 
 `dotnet new -u frendstask`
 
-## Changing target framework
-
-Created project targets .Net standard 2.0. If you  want to target framework or both standard and framewrok you can set 
-
-`<TargetFramework>netstandard2.0</TargetFramework>`
-
-to
-
-`<TargetFrameworks>net461</TargetFrameworks>`
-
-or 
-
-`<TargetFrameworks>netstandard2.0;net461</TargetFrameworks>`
-
-.csproj file that is crated for you.
-
 ## Building this repository
 
 `dotnet pack`
@@ -111,7 +96,6 @@ or
 This command will build the project and create a NuGet package in .\bin\Debug 
 
 `dotnet new -i <ABSOLUTE_PATH_TO_NUPKG_FILE>`
-
 
 
 ## special notes about this repository

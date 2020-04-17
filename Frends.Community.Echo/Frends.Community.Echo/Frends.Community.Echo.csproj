@@ -1,14 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <!--#if IsMultiTarget -->
+	<TargetFrameworks>netstandard2.0;net471</TargetFrameworks>
+    <!--#else -->
+	<TargetFramework>netstandard2.0</TargetFramework>
+    <!--#endif -->
     <description>This is template task.</description>
     <authors>HiQ Finland</authors>
     <copyright>HiQ Finland</copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <!--#if EnableCommunityTask -->
     <PackageProjectUrl>https://github.com/CommunityHiQ/Frends.Community.Echo</PackageProjectUrl>
-    <!--#endif" -->
+    <!--#endif -->
     <IncludeSource>true</IncludeSource>
     <PackageTags>Frends</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>

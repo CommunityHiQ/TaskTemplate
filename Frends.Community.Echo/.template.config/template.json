@@ -21,12 +21,12 @@
             "defaultValue": "Echo",
             "replaces": "Echo"
         },
-		"authors": {
+        "authors": {
             "type": "parameter",
             "defaultValue": "HiQ Finland",
             "replaces": "HiQ Finland"
         },
-		"license": {
+        "license": {
             "type": "parameter",
             "defaultValue": "MIT",
             "replaces": "MIT"
@@ -35,47 +35,82 @@
             "type": "parameter",
             "dataType": "bool",
             "defaultValue": "true"
+        },
+        "TargetPlatform": {
+            "type": "parameter",
+            "datatype": "choice",
+            "defaultValue": "netstandard2.0;net471",
+            "choices": [{
+                    "choice": "netstandard2.0;net471",
+                    "description": "Target both .Net standard 2.0 and .NET Framework 4.7.1"
+                }, {
+                    "choice": "netstandard2.0",
+                    "description": ".Net standard 2.0"
+                }, {
+                    "choice": "net471",
+                    "description": ".NET Framework 4.7.1"
+                }
+            ],
+            "replaces": "netstandard2.0;net471"
+        },
+        "IsLegacyProject": {
+            "type": "computed",
+            "value": "(TargetPlatform == \"net471\")",
+            "description": "Don't set this"
+
+        },
+        "IsMultiTarget": {
+            "type": "computed",
+            "value": "(TargetPlatform == \"netstandard2.0;net471\")",
+            "description": "Don't set this"
+
         }
     },
     "sources": [{
             "modifiers": [{
                     "condition": "(!EnableCommunityTask)",
                     "exclude": [".github/**", "LICENSE"]
-                    
-                }
+
+                }, 
+                {
+                    "condition": "(!IsLegacyProject)",
+                    "exclude": [".github/workflows/DotNetFrameworkCI.yml"]
+                },
+                {
+                    "condition": "(IsLegacyProject)",
+                    "exclude": [".github/workflows/PackAndPushAfterMerge.yml", ".github/workflows/BuildAndTestOnEveryPush.yml"]
+                },
             ]
         }
     ],
-	"SpecialCustomOperations": {
-  "**/*.md": {
-    "operations": [
-      {
-        "type": "conditional",
-        "configuration": {
-          "if": ["---#if"],
-          "else": ["---#else"],
-          "elseif": ["---#elseif", "---#elif"],
-          "endif": ["---#endif"],
-          "trim" : "true",
-          "wholeLine": "true",
+    "SpecialCustomOperations": {
+        "**/*.md": {
+            "operations": [{
+                    "type": "conditional",
+                    "configuration": {
+                        "if": ["---#if"],
+                        "else": ["---#else"],
+                        "elseif": ["---#elseif", "---#elif"],
+                        "endif": ["---#endif"],
+                        "trim": "true",
+                        "wholeLine": "true",
+                    }
+                }
+            ]
+        },
+        "**/*.csproj": {
+            "operations": [{
+                    "type": "conditional",
+                    "configuration": {
+                        "actionableIf": ["<!--#if"],
+                        "actionableElse": ["#else", "<!--#else"],
+                        "actionableElseif": ["#elseif", "<!--#elseif"],
+                        "endif": ["#endif", "<!--#endif"],
+                        "trim": "true",
+                        "wholeLine": "true",
+                    }
+                }
+            ]
         }
-      }
-    ]
-  },
-  "**/*.csproj": {
-      "operations": [
-        {
-          "type": "conditional",
-          "configuration": {
-            "actionableIf": [ "<!--#if" ],
-            "actionableElse": [ "#else", "<!--#else" ],
-            "actionableElseif": [ "#elseif", "<!--#elseif" ],
-            "endif": [ "#endif", "<!--#endif" ],
-            "trim" : "true",
-            "wholeLine": "true",
-          }
-        }
-      ]
     }
-  }
 }
