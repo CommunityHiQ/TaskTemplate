@@ -1,10 +1,7 @@
 name: AutoBuild.yml
 
-on:
-  push:
-    branches-ignore:
-      - master
-      
+on: [push]
+
 jobs:
   build:
     name: AutoBuild on ubuntu-latest
@@ -16,4 +13,4 @@ jobs:
       run: dotnet pack --configuration Release
       
     - name: Push NuGet package to the testfeed
-      run: dotnet nuget push Frends.Community.Echo/bin/Release/Frends.Community.Echo.*.nupkg --api-key ${{ secrets.CommunityFeedApiKey }} --source https://www.myget.org/F/frends-community-test/api/v2/package
+      run: dotnet nuget push frendstask.*.nupkg -k {{ secrets.CommunityNugetOrgFeedApiKey }} -s https://api.nuget.org/v3/index.json
