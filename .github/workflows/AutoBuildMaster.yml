@@ -1,8 +1,8 @@
-name: AutoBuild.yml
+name: AutoBuildMaster.yml
 
 on:
   push:
-    branches-ignore:
+    branches:
       - master
 jobs:
   build:
