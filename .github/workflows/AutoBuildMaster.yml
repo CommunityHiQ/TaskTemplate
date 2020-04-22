@@ -15,4 +15,4 @@ jobs:
       run: dotnet pack --configuration Release
       
     - name: Push NuGet package to the testfeed
-      run: dotnet nuget push bin/Release/frendstask.*.nupkg  -k {{ secrets.CommunityNugetOrgFeedApiKey }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push bin/Release/frendstask.*.nupkg  -k ${{ secrets.CommunityNugetOrgFeedApiKey }} -s https://api.nuget.org/v3/index.json
