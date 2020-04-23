@@ -2,17 +2,18 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>0.0.9</PackageVersion>
+    <PackageVersion>0.0.10</PackageVersion>
     <PackageId>frendstask</PackageId>
-    <Title>AdatumCorporation Templates</Title>
     <Authors>HiQ Finland</Authors>
-    <Description>Template for creating FRENDS tasks.</Description>
+    <Copyright>HiQ Finland</Copyright>
+    <Description>Template for creating FRENDS (frends.com) tasks.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>dotnet-new;templates;frends</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
     <IncludeContentInPack>true</IncludeContentInPack>
 	
 	<!-- Setting IncludeBuildOutput to true results in false NU518 warning: https://docs.microsoft.com/en-us/nuget/reference/errors-and-warnings/nu5128#scenario-2
-	https://github.com/NuGet/Home/issues/8713 Therefore ikt is supressed -->
+	https://github.com/NuGet/Home/issues/8713 Therefore it is supressed. -->
 	<NoWarn>$(NoWarn);NU5128</NoWarn> 
     <IncludeBuildOutput>false</IncludeBuildOutput>
 	
@@ -23,12 +24,10 @@
     <Content Include="Frends.Community.Echo\**\*" Exclude="Frends.Community.Echo\**\bin\**;Frends.Community.Echo\**\obj\**;**\.git\**;**\.vs\**" />
     <Compile Remove="**\*" />
 	
-	
   <Content Include="readme.txt">
     <Pack>true</Pack>
     <PackagePath>\</PackagePath>
   </Content>
   </ItemGroup>
-  
 
 </Project>
