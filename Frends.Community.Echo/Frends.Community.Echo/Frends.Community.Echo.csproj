@@ -16,7 +16,7 @@
     <IncludeSource>true</IncludeSource>
     <PackageTags>Frends</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>0.0.5</Version>
+    <Version>0.0.6</Version>
   </PropertyGroup>
 
   <ItemGroup>
