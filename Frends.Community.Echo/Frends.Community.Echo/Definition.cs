@@ -1,5 +1,6 @@
 ﻿#pragma warning disable 1591
 
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Frends.Community.Echo
@@ -13,6 +14,7 @@ namespace Frends.Community.Echo
         /// Something that will be repeated.
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
+        [DefaultValue("Lorem ipsum dolor sit amet.")]
         public string Message;
     }
 
@@ -24,12 +26,14 @@ namespace Frends.Community.Echo
         /// <summary>
         /// Number of times input is echoed.
         /// </summary>
+        [DefaultValue(3)]
         public int Amount;
 
         /// <summary>
         /// How repeats of input are separated.
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
+        [DefaultValue(" ")]
         public string Delimiter;
     }
 

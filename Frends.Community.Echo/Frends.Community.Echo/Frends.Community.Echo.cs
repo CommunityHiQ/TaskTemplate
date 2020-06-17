@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Threading;
+using Microsoft.CSharp; // You can remove this if you don't need dynamic type in .Net Standard tasks
 
 #pragma warning disable 1591
 

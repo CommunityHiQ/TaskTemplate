@@ -11,6 +11,7 @@
     <PackageTags>dotnet-new;templates;frends</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
     <IncludeContentInPack>true</IncludeContentInPack>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
 	
 	<!-- Setting IncludeBuildOutput to true results in false NU518 warning: https://docs.microsoft.com/en-us/nuget/reference/errors-and-warnings/nu5128#scenario-2
 	https://github.com/NuGet/Home/issues/8713 Therefore it is supressed. -->
