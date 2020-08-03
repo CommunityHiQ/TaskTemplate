@@ -1,9 +1,9 @@
 {
-    "author": "HiQ Finland", // foobar
+    "author": "HiQ Finland",
     "classifications": ["Solution"],
     "name": "Community task template",
     "identity": "Frends.TaskTemplate ", // Unique name for this template
-    "shortName": "frendstasktemplate", // Short name that can be used on the cli
+    "shortName": "frendstask", // Short name that can be used on the cli
     "tags": {
         "language": "C#" // Specify that this template is in C#.
     },
