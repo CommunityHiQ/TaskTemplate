@@ -1,0 +1,18 @@
+name: BuildMaster.yml
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build master on ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Pack release version
+      run: dotnet pack --configuration Release
+      
+    - name: Push NuGet package to the prod feed
+      run: dotnet nuget push bin/Release/frendstask.*.nupkg  -k ${{ secrets.CommunityNugetOrgFeedApiKey }} -s https://api.nuget.org/v3/index.json
