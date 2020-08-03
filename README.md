@@ -3,12 +3,11 @@
 
 ![](https://github.com/CommunityHiQ/Frends.Community.Echo/workflows/AutoBuildMAster/badge.svg) ![Nuget](https://img.shields.io/nuget/v/frendstask) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This template can be used to create both community and custom task for [FRENDS](frends.com) integration paltform. This should enamble you to start writing code without any hastle with project formats etc.
+This template can be used to create both community and custom tasks for [FRENDS](frends.com) integration paltform. This enambles you to start writing code without any hastle with project formats etc.
 
-Created C# solution will use new tool chain from .Net technologies to ensure compatiblity with .Net with crossplatform. 
+Created C# solution will use new tool chain (dotnet new etc.) from .Net technologies to ensure compatiblity with .Net with crossplatform. 
 
 You can learn more about custom task [here](https://docs.frends.com/en/articles/2206746-custom-tasks) and from community tasks [here](https://github.com/CommunityHiQ/Instructions).
-
 
 ## Install template
 
@@ -79,6 +78,7 @@ Options:
                                 netstandard2.0           - .Net standard 2.0
                                 net471                   - .NET Framework 4.7.1
                             Default: netstandard2.0;net471
+
 ```
 
 ## Update template
@@ -94,6 +94,8 @@ Options:
 `dotnet pack`
 
 This command will build the project and create a NuGet package in .\bin\Debug 
+
+To install this template from locally created NuGet package use
 
 `dotnet new -i <ABSOLUTE_PATH_TO_NUPKG_FILE>`
 
