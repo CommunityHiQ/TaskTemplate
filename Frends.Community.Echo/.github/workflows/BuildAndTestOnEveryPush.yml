@@ -4,17 +4,12 @@ on:
   push:
     branches-ignore:
       - master
-      
-# nice example: https://github.com/microsoft/vs-editor-api/blob/master/.github/workflows/main.yml
 
 jobs:
   build:
-    name: Build on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows-latest, ubuntu-latest]
+    name: Build on windows-latest
+    runs-on: windows-latest
+    
     steps:
     - uses: actions/checkout@v1
 
@@ -31,5 +26,3 @@ jobs:
     - name: Push NuGet package to the testfeed
       if: runner.os == 'Windows' 
       run: dotnet nuget push Frends.Community.Echo\bin\Release\Frends.Community.Echo.*.nupkg  --api-key ${{ secrets.CommunityFeedApiKey }} --source https://www.myget.org/F/frends-community-test/api/v2/package --symbol-source https://www.myget.org/F/frends-community-test/symbols/api/v2/package
-
-

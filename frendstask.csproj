@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>0.0.13</PackageVersion>
+    <PackageVersion>0.0.14</PackageVersion>
     <PackageId>frendstask</PackageId>
     <Title>AdatumCorporation Templates</Title>
     <Authors>HiQ Finland</Authors>
