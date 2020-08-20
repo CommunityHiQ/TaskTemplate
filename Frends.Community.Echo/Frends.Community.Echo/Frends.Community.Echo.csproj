@@ -6,7 +6,6 @@
     <!--#else -->
 	<TargetFramework>netstandard2.0</TargetFramework>
     <!--#endif -->
-    <description>This is template task.</description>
     <authors>HiQ Finland</authors>
     <copyright>HiQ Finland</copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -16,7 +15,7 @@
     <IncludeSource>true</IncludeSource>
     <PackageTags>Frends</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>0.0.6</Version>
+    <Version>0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
