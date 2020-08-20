@@ -7,14 +7,14 @@ namespace Frends.Community.Echo.Tests
     class TestClass
     {
         /// <summary>
-        /// You need to Frends.Community.Echo.SetPaswordsEnv.ps1 before running unit test, or some other way set environment variables e.g. with GitHub Secrets.
+        /// You need to run Frends.Community.Echo.SetPaswordsEnv.ps1 before running unit test, or some other way set environment variables e.g. with GitHub Secrets.
         /// </summary>
         [Test]
         public void ThreeEchos()
         {
             var input = new Parameters
             {
-                Message = Environment.GetEnvironmentVariable("ExampleEnviromentVariable", EnvironmentVariableTarget.User)
+                Message = Environment.GetEnvironmentVariable("EXAMPLE_ENVIROMENT_VARIABLE")
         };
 
             var options = new Options

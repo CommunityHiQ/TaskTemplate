@@ -1,1 +1,1 @@
-[System.Environment]::SetEnvironmentVariable('ExampleEnviromentVariable','foobar',[System.EnvironmentVariableTarget]::User)
+[System.Environment]::SetEnvironmentVariable('EXAMPLE_ENVIROMENT_VARIABLE','foobar')
