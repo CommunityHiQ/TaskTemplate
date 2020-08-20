@@ -17,5 +17,5 @@ jobs:
       run: dotnet pack --configuration Release --include-source 
       
     - name: Push NuGet package to the (prod) feed
-      run: dotnet nuget push Frends.Community.Echo\bin\Release\Frends.Community.Echo.*.nupkg  --api-key ${{ secrets.CommunityFeedApiKey }} --source https://www.myget.org/F/frends-community/api/v2/package --symbol-source https://www.myget.org/F/frends-community/symbols/api/v2/package
+      run: dotnet nuget push Frends.Community.Echo\bin\Release\Frends.Community.Echo.*.nupkg  --api-key ${{ secrets.COMMUNITY_FEED_API_KEY }} --source https://www.myget.org/F/frends-community/api/v2/package --symbol-source https://www.myget.org/F/frends-community/symbols/api/v2/package
 
