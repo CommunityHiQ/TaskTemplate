@@ -3,7 +3,7 @@
 
 ![](https://github.com/CommunityHiQ/Frends.Community.Echo/workflows/AutoBuildMAster/badge.svg) ![Nuget](https://img.shields.io/nuget/v/frendstask) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This template can be used to create both community and custom tasks for [FRENDS](frends.com) integration paltform. This enambles you to start writing code without any hastle with project formats etc.
+This template can be used to create both community and custom tasks for [frends](frends.com) integration paltform. This enambles you to start writing code without any hastle with project formats etc.
 
 Created C# solution will use new tool chain (dotnet new etc.) from .Net technologies to ensure compatiblity with .Net with crossplatform. 
 

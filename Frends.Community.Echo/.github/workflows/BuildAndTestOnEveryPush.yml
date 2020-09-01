@@ -21,10 +21,8 @@ jobs:
         EXAMPLE_ENVIROMENT_VARIABLE:  ${{ secrets.EXAMPLE_ENVIROMENT_VARIABLE }}
       run: dotnet test
       
-      if: runner.os == 'Windows' 
     - name: Pack release version of task
       run: dotnet pack --configuration Release --include-source
       
     - name: Push NuGet package to the testfeed
-      if: runner.os == 'Windows' 
       run: dotnet nuget push Frends.Community.Echo\bin\Release\Frends.Community.Echo.*.nupkg  --api-key ${{ secrets.COMMUNITY_FEED_API_KEY }} --source https://www.myget.org/F/frends-community-test/api/v2/package --symbol-source https://www.myget.org/F/frends-community-test/symbols/api/v2/package

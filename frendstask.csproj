@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>0.0.16</PackageVersion>
+    <PackageVersion>0.0.17</PackageVersion>
     <PackageId>frendstask</PackageId>
-    <Title>Template for creating FRENDS tasks.</Title>
+    <Title>Template for creating frends tasks.</Title>
     <Authors>HiQ Finland</Authors>
-    <Description>Template for creating FRENDS tasks.</Description>
+    <Description>Template for creating frends tasks.</Description>
 	<PackageProjectUrl>https://github.com/CommunityHiQ/Frends.Community.Echo</PackageProjectUrl>
     <PackageTags>dotnet-new;templates;frends</PackageTags>
     <TargetFramework>netstandard2.0</TargetFramework>
