@@ -1,7 +1,7 @@
 # Frends.Community.Echo
 
 ---#if (EnableCommunityTask)
-FRENDS Community Task for Echo
+frends Community Task for Echo
 
 [![Actions Status](https://github.com/CommunityHiQ/Frends.Community.Echo/workflows/PackAndPushAfterMerge/badge.svg)](https://github.com/CommunityHiQ/Frends.Community.Echo/actions) ![MyGet](https://img.shields.io/myget/frends-community/v/Frends.Community.Echo) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 ---#endif
@@ -16,10 +16,10 @@ FRENDS Community Task for Echo
 # Installing
 
 ---#if (EnableCommunityTask)
-You can install the task via FRENDS UI Task View or you can find the NuGet package from the following NuGet feed
+You can install the task via frends UI Task View or you can find the NuGet package from the following NuGet feed
 https://www.myget.org/F/frends-community/api/v3/index.json and in Gallery view in MyGet https://www.myget.org/feed/frends-community/package/nuget/Frends.Community.Echo
 ---#else
-You can install the task via FRENDS UI Task View by using `Import Task NuGet` button in Administration > Tasks.
+You can install the task via frends UI Task View by using `Import Task NuGet` button in Administration > Tasks.
 ---#endif
 
 # Tasks
