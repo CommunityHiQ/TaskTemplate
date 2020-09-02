@@ -16,17 +16,17 @@ frends Community Task for Echo
 # Installing
 
 ---#if (EnableCommunityTask)
-You can install the task via frends UI Task View or you can find the NuGet package from the following NuGet feed
+You can install the Task via frends UI Task View or you can find the NuGet package from the following NuGet feed
 https://www.myget.org/F/frends-community/api/v3/index.json and in Gallery view in MyGet https://www.myget.org/feed/frends-community/package/nuget/Frends.Community.Echo
 ---#else
-You can install the task via frends UI Task View by using `Import Task NuGet` button in Administration > Tasks.
+You can install the Task via frends UI Task View by using `Import Task NuGet` button in Administration > Tasks.
 ---#endif
 
 # Tasks
 
 ## Echo
 
-Repeats message
+Repeats a message
 
 ### Properties
 
@@ -57,7 +57,7 @@ To fetch result use syntax:
 # Building
 
 ---#if (EnableCommunityTask)
-Clone a copy of the repo
+Clone a copy of the repository
 
 `git clone https://github.com/CommunityHiQ/Frends.Community.Echo.git`
 ---#endif
@@ -66,7 +66,7 @@ Rebuild the project
 
 `dotnet build`
 
-Run Tests
+Run tests
 
 `dotnet test`
 
@@ -77,7 +77,7 @@ Create a NuGet package
 # Contributing
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
-1. Fork the repo on GitHub
+1. Fork the repository on GitHub
 2. Clone the project to your own machine
 3. Commit changes to your own branch
 4. Push your work back up to your fork
@@ -89,4 +89,4 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 | Version | Changes |
 | ------- | ------- |
-| 0.0.1   | Development stil going on. |
+| 0.0.1   | Development still going on |

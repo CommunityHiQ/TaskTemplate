@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Frends.Community.Echo
 {
     /// <summary>
-    /// Parameters class usually requires parameters that are required.
+    /// Parameters class usually contains parameters that are required.
     /// </summary>
     public class Parameters
     {
@@ -19,18 +19,18 @@ namespace Frends.Community.Echo
     }
 
     /// <summary>
-    /// Options class provides additional parameters.
+    /// Options class provides additional optional parameters.
     /// </summary>
     public class Options
     {
         /// <summary>
-        /// Number of times input is echoed.
+        /// Number of times input is repeated.
         /// </summary>
         [DefaultValue(3)]
         public int Amount;
 
         /// <summary>
-        /// How repeats of input are separated.
+        /// How repeats of the input are separated.
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
         [DefaultValue(" ")]
@@ -40,7 +40,7 @@ namespace Frends.Community.Echo
     public class Result
     {
         /// <summary>
-        /// Contains input repeated specified times.
+        /// Contains the input repeated the specified number of times.
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
         public string Replication;
