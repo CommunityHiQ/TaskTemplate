@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Threading;
-using Microsoft.CSharp; // You can remove this if you don't need dynamic type in .Net Standard tasks
+using Microsoft.CSharp; // You can remove this if you don't need dynamic type in .NET Standard frends Tasks
 
 #pragma warning disable 1591
 
@@ -22,7 +22,7 @@ namespace Frends.Community.Echo
 
             for (var i = 0; i < options.Amount; i++)
             {
-                // It is good to check cancellation token somewhere you spend lot of time, e.g. in loops.
+                // It is good to check the cancellation token somewhere you spend lot of time, e.g. in loops.
                 cancellationToken.ThrowIfCancellationRequested();
 
                 repeats[i] = input.Message;

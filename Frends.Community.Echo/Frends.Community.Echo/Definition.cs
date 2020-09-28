@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Frends.Community.Echo
 {
     /// <summary>
-    /// Parameters class usually requires parameters that are required.
+    /// Parameters class usually contains parameters that are required.
     /// </summary>
     public class Parameters
     {
@@ -15,32 +15,32 @@ namespace Frends.Community.Echo
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
         [DefaultValue("Lorem ipsum dolor sit amet.")]
-        public string Message;
+        public string Message { get; set; }
     }
 
     /// <summary>
-    /// Options class provides additional parameters.
+    /// Options class provides additional optional parameters.
     /// </summary>
     public class Options
     {
         /// <summary>
-        /// Number of times input is echoed.
+        /// Number of times input is repeated.
         /// </summary>
         [DefaultValue(3)]
-        public int Amount;
+        public int Amount { get; set; }
 
         /// <summary>
-        /// How repeats of input are separated.
+        /// How repeats of the input are separated.
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
         [DefaultValue(" ")]
-        public string Delimiter;
+        public string Delimiter { get; set; }
     }
 
     public class Result
     {
         /// <summary>
-        /// Contains input repeated specified times.
+        /// Contains the input repeated the specified number of times.
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
         public string Replication;
