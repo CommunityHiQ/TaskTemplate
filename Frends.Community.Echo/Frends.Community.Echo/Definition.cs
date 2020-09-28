@@ -15,7 +15,7 @@ namespace Frends.Community.Echo
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
         [DefaultValue("Lorem ipsum dolor sit amet.")]
-        public string Message;
+        public string Message { get; set; }
     }
 
     /// <summary>
@@ -27,14 +27,14 @@ namespace Frends.Community.Echo
         /// Number of times input is repeated.
         /// </summary>
         [DefaultValue(3)]
-        public int Amount;
+        public int Amount { get; set; }
 
         /// <summary>
         /// How repeats of the input are separated.
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
         [DefaultValue(" ")]
-        public string Delimiter;
+        public string Delimiter { get; set; }
     }
 
     public class Result
