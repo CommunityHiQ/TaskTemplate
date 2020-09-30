@@ -109,7 +109,7 @@ Options:
 
 `dotnet pack`
 
-This command will build the project and create a NuGet package in .\bin\Debug 
+This command will build the project and create a NuGet package `.\bin\Debug\frendstask.*.*.*.nupkg` You can ignore warnings about Frends.Community.Echo.SetPaswordsEnv.ps1.
 
 To install this template from locally created NuGet package use
 
