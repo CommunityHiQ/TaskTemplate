@@ -34,7 +34,7 @@
         "EnableCommunityTask": {
             "type": "parameter",
             "dataType": "bool",
-            "defaultValue": "true"
+            "defaultValue": "false"
         },
         "TargetPlatform": {
             "type": "parameter",
@@ -69,7 +69,7 @@
     "sources": [{
             "modifiers": [{
                     "condition": "(!EnableCommunityTask)",
-                    "exclude": [".github/**", "LICENSE"]
+                    "exclude": [".github/**", "LICENSE", "Frends.Community.Echo.SetPaswordsEnv.ps1"]
 
                 }, 
                 {
